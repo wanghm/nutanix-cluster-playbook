@@ -54,7 +54,7 @@ ansible-vault decrypt group_vars/cvm/private.yml
 
 ### Run
 
-### Use ssh instead of sftp
+#### Use ssh instead of sftp
 ```
 export ANSIBLE_HOST_KEY_CHECKING=False
 #export ANSIBLE_TRANSPORT=ssh

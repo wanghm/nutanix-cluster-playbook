@@ -1,0 +1,26 @@
+---
+# cluster tasks (run on one CVM)
+- name: check cluster status
+  command: /usr/local/nutanix/cluster/bin/cluster status
+  register: cluster_status
+  ignore_errors: yes
+  
+- debug: msg="{{ cluster_status.stdout }}"
+
+- name: config cluster IP
+#  command: /home/nutanix/prism/cli/ncli cluster edit-info external-ip-address={{ CLASS_IP }}
+  command: echo "ncli cluster edit-info external-ip-address={{ CLASS_IP }}"
+  register: cluster_ip
+- debug: msg="{{ cluster_ip.stdout }}"
+
+- name: config cluster Data Service IP
+#  command: /home/nutanix/prism/cli/ncli cluster edit-info external-data-services-ip-address={{ DATA_SVC_IP }}
+  command: echo "ncli cluster edit-info external-data-services-ip-address={{ DATA_SVC_IP }}"
+  register: data_svc_ip
+- debug: msg="{{ data_svc_ip.stdout }}"
+
+- name: config name servers
+#  command: /home/nutanix/prism/cli/ncli external-data-services-ip-address={{ NAME_SERVERS }}
+  command: echo "ncli external-data-services-ip-address={{ NAME_SERVERS }}"
+  register: name_servers
+- debug: msg="{{ name_servers.stdout }}"

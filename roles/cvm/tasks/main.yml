@@ -1,0 +1,9 @@
+---
+#CVM tasks (run on all CVMs)
+- name: copy file
+  copy:
+    src: ../files/fstrim
+    dest: /etc/cron.daily/
+    mode: "0700"
+  become: true
+

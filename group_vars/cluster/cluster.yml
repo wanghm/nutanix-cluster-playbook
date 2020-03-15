@@ -1,0 +1,4 @@
+CLASS_IP: "xxx.xxx.xxx.xxx"
+DATA_SVC_IP: "xxx.xxx.xxx.xxx"
+NAME_SERVERS: "xxx.xxx.xxx.xxx,xxx.xxx.xxx.xxx"
+NTP_SERVERS: "xxx.xxx.xxx.xxx,xxx.xxx.xxx.xxx,xxx.xxx.xxx.xxx"

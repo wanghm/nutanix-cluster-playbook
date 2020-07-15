@@ -1,8 +1,8 @@
-CLASS_IP: "10.129.42.209"
-DATA_SVC_IP: "10.129.42.210"
-NAME_SERVERS: "10.129.40.141,10.129.40.142"
+CLASS_IP: "10.xx.yy.71"
+DATA_SVC_IP: "10.xx,yy.72"
+NAME_SERVERS: "10.xx.yy.141,10.xx.yy.142"
 NTP_SERVERS: "0.sg.pool.ntp.org,1.sg.pool.ntp.org,2.sg.pool.ntp.org,3.sg.pool.ntp.org"
-IPCONFIG: "10.129.42.1/24"
-NW: "IPAM-10.129.42.0/24"
-VLAN_DHCP_START: "10.129.42.151" #change this
-VLAN_DHCP_END: "10.129.42.180" #change this
+IPCONFIG: "10.xx.yy.1/24"
+NW: "IPAM-10.xx.yy.0/24"
+VLAN_DHCP_START: "10.xx.yy.151" #change this
+VLAN_DHCP_END: "10.xx.yy.180" #change this

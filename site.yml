@@ -1,15 +1,15 @@
 ---
 # cluster tasks (run on one CVM)
-- hosts: cluster
-  remote_user: nutanix
-  roles:
-    - common
-    - cluster
+#- hosts: cluster
+#  remote_user: nutanix
+#  roles:
+#    - common
+#    - cluster
 
 # CVM tasks (run on all CVMs)
 - hosts: cvm
   remote_user: nutanix
   roles:
-    - common
+  #  - common
     - cvm
     

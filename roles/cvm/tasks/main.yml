@@ -1,9 +1,21 @@
 ---
 #CVM tasks (run on all CVMs)
-- name: copy file
-  copy:
-    src: ../files/fstrim
-    dest: /etc/cron.daily/
-    mode: "0700"
-  become: true
+# - name: copy file
+#   copy:
+#     src: ../files/fstrim
+#     dest: /etc/cron.daily/
+#     mode: "0700"
+#   become: true
 
+#- name: run 
+#  command: /sbin/fstrim --all
+#  become: true
+
+
+# CVM tasks (run on each CVM)
+- name: check ncc version on each CVM
+  shell: "cat /home/nutanix/ncc/version.txt | sed -n 2,2p"
+  register: ncc_version
+  ignore_errors: yes
+  
+- debug: msg="{{ ncc_version.stdout }}"
